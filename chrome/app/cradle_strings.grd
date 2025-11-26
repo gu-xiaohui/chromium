@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file contains definitions of strings that are specific to Cradle Browser.
+     Based on chromium_strings.grd but customized for the Cradle browser brand. -->
+
+<grit base_dir="." latest_public_release="0" current_release="1"
+      source_lang_id="en" enc_check="möl">
+  <outputs>
+    <output filename="grit/cradle_strings.h" type="rc_header">
+      <emit emit_type='prepend'></emit>
+    </output>
+    <output filename="cradle_strings_en-US.pak" type="data_package" lang="en" />
+    <output filename="cradle_strings_en-GB.pak" type="data_package" lang="en-GB" />
+  </outputs>
+  <translations>
+  </translations>
+  <release seq="1">
+    <messages fallback_to_english="true">
+      <!-- Product Name -->
+      <message name="IDS_PRODUCT_NAME" desc="The Cradle application name" translateable="false">
+        Cradle Browser
+      </message>
+      <message name="IDS_SHORT_PRODUCT_NAME" desc="The Cradle application short name." translateable="false">
+        Cradle
+      </message>
+
+      <!-- About/Version Page -->
+      <message name="IDS_ABOUT_VERSION_COMPANY_NAME" desc="Company name on the about pages">
+        Cradle Browser Authors
+      </message>
+      <message name="IDS_ABOUT_VERSION_COPYRIGHT" desc="Copyright information on the about pages">
+        Copyright <ph name="YEAR">{0,date,y}<ex>2024</ex></ph> Cradle Browser Authors. All rights reserved.
+      </message>
+
+      <!-- Window Title Format -->
+      <if expr="not is_chromeos">
+        <message name="IDS_BROWSER_WINDOW_TITLE_FORMAT" desc="The format for titles displayed in tabs and popup windows">
+          <ph name="PAGE_TITLE">$1<ex>Google</ex></ph> - Cradle
+        </message>
+      </if>
+      <if expr="is_chromeos">
+        <message name="IDS_BROWSER_WINDOW_TITLE_FORMAT" desc="The format for titles displayed in tabbed browser windows">
+          Cradle - <ph name="PAGE_TITLE">$1<ex>Google</ex></ph>
+        </message>
+      </if>
+
+      <!-- Accessible window title format -->
+      <message name="IDS_ACCESSIBLE_BROWSER_WINDOW_TITLE_FORMAT" desc="The format for the accessible name of a tabbed browser window">
+        <ph name="PAGE_TITLE">$1<ex>Google</ex></ph> - Cradle
+      </message>
+      <message name="IDS_ACCESSIBLE_BETA_BROWSER_WINDOW_TITLE_FORMAT" desc="The format for the accessible name of a tabbed browser window for the beta channel version of the browser">
+        <ph name="PAGE_TITLE">$1<ex>Google</ex></ph> - Cradle Beta
+      </message>
+      <message name="IDS_ACCESSIBLE_DEV_BROWSER_WINDOW_TITLE_FORMAT" desc="The format for the accessible name of a tabbed browser window for the developer (dev) channel version of the browser">
+        <ph name="PAGE_TITLE">$1<ex>Google</ex></ph> - Cradle Dev
+      </message>
+      <message name="IDS_ACCESSIBLE_CANARY_BROWSER_WINDOW_TITLE_FORMAT" desc="The format for the accessible name of a tabbed browser window for the canary (nightly build) channel version of the browser">
+        <ph name="PAGE_TITLE">$1<ex>Google</ex></ph> - Cradle Canary
+      </message>
+
+      <if expr="is_win">
+        <message name="IDS_PRODUCT_DESCRIPTION" desc="Browser description">
+          Cradle is a modern web browser built on Chromium that runs webpages and applications with lightning speed. It's fast, stable, and easy to use. Browse the web more safely with malware and phishing protection built into Cradle.
+        </message>
+        <message name="IDS_WELCOME_TO_CHROME" desc="Welcoming text announced via screen readers the first time Cradle is launched at the conclusion of installation.">
+          Welcome to Cradle; new browser window opened
+        </message>
+      </if>
+
+      <if expr="is_macosx or is_linux">
+        <message name="IDS_FIRST_RUN_DIALOG_WINDOW_TITLE" desc="Window title of First Run dialog on Mac and Linux, displayed in title bar">
+          Welcome to Cradle
+        </message>
+      </if>
+
+      <message name="IDS_ACCNAME_APP" desc="The accessible name for the app menu." translateable="false">
+        Cradle
+      </message>
+
+      <!-- Task Manager -->
+      <if expr="not is_macosx and not is_chromeos">
+        <message name="IDS_TASK_MANAGER_TITLE" desc="The title of the Task Manager window">
+          Task Manager - Cradle
+        </message>
+      </if>
+
+      <!-- Default Browser -->
+      <message name="IDS_FR_CUSTOMIZE_DEFAULT_BROWSER" desc="Default browser checkbox label">
+        Make Cradle the default browser
+      </message>
+
+      <message name="IDS_DEFAULT_BROWSER_INFOBAR_TEXT" desc="Text to show in an infobar when Cradle is not the current default browser.">
+        Cradle isn't your default browser
+      </message>
+
+      <!-- Settings -->
+      <if expr="use_titlecase">
+        <message name="IDS_STATUS_TRAY_KEEP_CHROME_RUNNING_IN_BACKGROUND" desc="In Title Case: The checkbox in the status tray context menu that controls whether Cradle keeps running in the background after the last window is closed">
+          Let Cradle Run in the Background
+        </message>
+      </if>
+      <if expr="not use_titlecase">
+        <message name="IDS_STATUS_TRAY_KEEP_CHROME_RUNNING_IN_BACKGROUND" desc="The checkbox in the status tray context menu that controls whether Cradle keeps running in the background after the last window is closed">
+          Let Cradle run in the background
+        </message>
+      </if>
+
+      <!-- Uninstall -->
+      <if expr="is_win">
+        <message name="IDS_UNINSTALL_CLOSE_APP" desc="Message to user when uninstall detects other app instance running">
+          Please close all Cradle windows and try again.
+        </message>
+        <message name="IDS_UNINSTALL_VERIFY" desc="Message to confirm user wants to uninstall">
+          Are you sure you want to uninstall Cradle?
+        </message>
+        <message name="IDS_UNINSTALL_CHROME" desc="The title of the Cradle uninstall dialog.">
+          Uninstall Cradle
+        </message>
+      </if>
+
+      <!-- Hung Browser Detector -->
+      <if expr="is_win">
+        <message name="IDS_BROWSER_HUNGBROWSER_MESSAGE" desc="Content of the dialog box shown when the browser is hung">
+          Cradle is unresponsive. Relaunch now?
+        </message>
+      </if>
+
+      <!-- Installation Messages -->
+      <if expr="is_win">
+        <message name="IDS_INSTALL_HIGHER_VERSION" desc="Error displayed when higher version already exists.">
+          This computer already has a more recent version of Cradle. If the software is not working, please uninstall Cradle and try again.
+        </message>
+        <message name="IDS_INSTALL_FAILED" desc="Error displayed if installation fails due to some unknown error.">
+          Installation failed due to unspecified error. If Cradle is currently running, please close it and try again.
+        </message>
+        <message name="IDS_SAME_VERSION_REPAIR_FAILED" desc="Error displayed if installation fails due to Cradle running.">
+          Can not install the same Cradle version that is currently running. Please close Cradle and try again.
+        </message>
+        <message name="IDS_INSTALL_OS_NOT_SUPPORTED" desc="Error displayed if OS is not supported">
+          Cradle requires Windows 10 or higher.
+        </message>
+      </if>
+
+      <!-- Profile/User Directory -->
+      <message name="IDS_CANT_WRITE_USER_DIRECTORY_SUMMARY" desc="Summary of problem displayed in dialog when we can't create a directory for this user.">
+Cradle cannot read and write to its data directory:
+
+<ph name="USER_DATA_DIRECTORY">$1<ex>C:\Users\user\AppData\Local\Cradle\User Data</ex></ph>
+      </message>
+
+      <!-- Preferences Error -->
+      <message name="IDS_PREFERENCES_CORRUPT_ERROR" desc="Error displayed on startup when user preferences file can not be read">
+Your preferences file is corrupt or invalid.
+
+Cradle is unable to recover your settings.
+      </message>
+
+      <!-- Profile Error -->
+      <message name="IDS_PROFILE_TOO_NEW_ERROR" desc="Error displayed on startup when the profile is from a newer version of the product and can not be read">
+Your profile can not be used because it is from a newer version of Cradle.
+
+Some features may be unavailable. Please specify a different profile directory or use a newer version of Cradle.
+      </message>
+
+      <!-- Password Manager -->
+      <message name="IDS_PASSWORD_MANAGER_TITLE_BRAND" desc="The product name used in the title of the password bubble." translateable="false">
+        Cradle
+      </message>
+    </messages>
+  </release>
+</grit>

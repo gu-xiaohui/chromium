@@ -1,0 +1,12 @@
+COMPANY_FULLNAME=Cradle Browser Authors
+COMPANY_SHORTNAME=Cradle
+PRODUCT_FULLNAME=Cradle Browser
+PRODUCT_SHORTNAME=Cradle
+PRODUCT_INSTALLER_FULLNAME=Cradle Browser Installer
+PRODUCT_INSTALLER_SHORTNAME=Cradle Installer
+COPYRIGHT=Copyright @LASTCHANGE_YEAR@ Cradle Browser Authors. All rights reserved.
+MAC_BUNDLE_ID=io.cradle.browser
+MAC_CREATOR_CODE=Crdl
+# MAC_TEAM_ID should be set to your Apple Developer Team ID for code signing
+# Leave empty for development builds; required for macOS distribution
+MAC_TEAM_ID=
