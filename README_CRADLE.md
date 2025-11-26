@@ -64,7 +64,7 @@ To customize the Cradle branding:
 ## Directory Structure
 
 ```
-cradle-browser/
+src/                               # Chromium source root
 ├── chrome/
 │   └── app/
 │       ├── theme/
